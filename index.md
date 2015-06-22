@@ -1,18 +1,9 @@
 ---
-layout: default
-title: GreenCape
-category: GreenCape
-author: Niels Braczek
-author_email: nbraczek@bsds.de
+layout: home
+excerpt: "A pool for development related stuff."
+tags: [GreenCape]
+image:
+  feature: header-image-1.jpg
+  credit: By Marko Puusaar <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>
+  creditlink: https://commons.wikimedia.org/wiki/File%3AMobile_software_development_laboratory_in_The_Estonian_Information_Technology_College.jpg
 ---
-
-# Who's GreenCape?
-
-GreenCape is a non-profit division of [BSDS](http://bsds.de).
-It was created as a pool for development related stuff, which is used throughout the BSDS divisions
-[nibralab](http://nibralab.github.io) (think tank), [laJoom](http://laJoom.com) (extension development), and
-BSDS (consulting) itself.
-
-
-
-
