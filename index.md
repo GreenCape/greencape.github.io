@@ -1,7 +1,7 @@
 ---
 layout: default
 title: GreenCape
-category: Home
+category: GreenCape
 author: Niels Braczek
 author_email: nbraczek@bsds.de
 ---
