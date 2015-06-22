@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+    <head>
+        {% include head.html %}
+    </head>
+
+    <body style="margin:0;">
+
+        <header style="background-color:#5d94eb;color:#fff;padding:1em;">
+            <h1>GreenCape</h1>
+
+            <p>Development related stuff by [BSDS](http://bsds.de)</p>
+        </header>
+
+        <aside style="float:right;max-width:30%;padding:1em;">
+            {% include sidebar.html %}
+        </aside>
+
+        <section style="clear:left;padding:1em;">
+            {{ content }}
+        </section>
+
+    </body>
+</html>
+
