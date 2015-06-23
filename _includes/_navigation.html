@@ -9,7 +9,11 @@
 		        {% for link in site.data.navigation %}
 				    {% if link.url contains 'http' %}
 				        {% assign domain = '' %}
-                        {% assign external = ' <i class="fa fa-fw fa-external-link"></i>' %}
+                        {% if link.url contains 'github.com' %}
+                            {% assign external = ' <i class="fa fa-fw fa-github"></i>' %}
+                        {% else %}
+                            {% assign external = ' <i class="fa fa-fw fa-external-link"></i>' %}
+                        {% endif %}
                     {% else %}
 				        {% assign domain = site.url %}
                         {% assign external = '' %}
@@ -21,7 +25,11 @@
                             {% for sub in link.menu %}
                                 {% if sub.url contains 'http' %}
                                     {% assign domain = '' %}
-                                    {% assign external = ' <i class="fa fa-fw fa-external-link"></i>' %}
+                                    {% if sub.url contains 'github.com' %}
+                                        {% assign external = ' <i class="fa fa-fw fa-github"></i>' %}
+                                    {% else %}
+                                        {% assign external = ' <i class="fa fa-fw fa-external-link"></i>' %}
+                                    {% endif %}
                                 {% else %}
                                     {% assign domain = site.url %}
                                     {% assign external = '' %}
