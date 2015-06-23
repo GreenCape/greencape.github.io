@@ -20,9 +20,11 @@
     {% include _author-bio.html %}
   </div>
   <article class="page">
-    <h1>{{ page.title }}{% include _github.html %}</h1>
+    <h1>{{ page.title }}{% if page.repo %}{% include _github.html %}{% endif %}</h1>
     <div class="article-wrap">
+      {% include _doc_nav.html %}
       {{ content }}
+      {% include _doc_nav.html %}
       {% if page.share != false %}
         <hr />
         {% include _social-share.html %}
