@@ -1,7 +1,7 @@
 # Site wide configuration
 title:            GreenCape
 locale:           en_US
-url:
+url:              greencape.github.io
 
 # Jekyll configuration
 permalink:   /:categories/:title/
