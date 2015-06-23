@@ -10,6 +10,9 @@ image:
 ---
 
 **GreenCape** is a non-profit division of [BSDS](http://bsds.de).
+It was created as a pool for development related stuff, which is used throughout the BSDS divisions
+[nibralab](http://nibralab.github.io) (think tank), [laJoom](http://laJoom.com) (extension development), and
+BSDS (consulting) itself.
 
 > **BSDS Braczek Software- und DatenSysteme**  
 > Niels Braczek  
