@@ -9,10 +9,32 @@
 		        {% for link in site.data.navigation %}
 				    {% if link.url contains 'http' %}
 				        {% assign domain = '' %}
-				        {% else %}
+                        {% assign external = ' <i class="fa fa-fw fa-external-link"></i>' %}
+                    {% else %}
 				        {% assign domain = site.url %}
-				    {% endif %}
-				    <li><a href="{{ domain }}{{ link.url }}" {% if link.url contains 'http' %}target="_blank"{% endif %}>{{ link.title }}</a></li>
+                        {% assign external = '' %}
+                    {% endif %}
+				    <li>
+                        {% if link.menu %}
+                        <a href="{{ domain }}{{ link.url }}" onclick="$('#{{ link.id }}').toggle(); return false;">{{ link.title }}{{ external }}</a>
+                        <ul id="{{ link.id }}" style="display:none;">
+                            {% for sub in link.menu %}
+                                {% if sub.url contains 'http' %}
+                                    {% assign domain = '' %}
+                                    {% assign external = ' <i class="fa fa-fw fa-external-link"></i>' %}
+                                {% else %}
+                                    {% assign domain = site.url %}
+                                    {% assign external = '' %}
+                                {% endif %}
+                                <li>
+                                    <a href="{{ domain }}{{ sub.url }}" {% if sub.url contains 'http' %}target="_blank"{% endif %} onclick="$('#{{ link.id }}').hide();">{{ sub.title }}{{ external }}</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                        {% else %}
+                        <a href="{{ domain }}{{ link.url }}" {% if link.url contains 'http' %}target="_blank"{% endif %}>{{ link.title }}{{ external }}</a>
+                        {% endif %}
+                    </li>
 				{% endfor %}
 		    </ul>
 		</nav>
