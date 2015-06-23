@@ -65,11 +65,12 @@ body {
     list-style-type: none;
   }
   #site-nav ul {
-    overflow: visible;
+    @media #{$small} {
+      overflow: visible;
+    }
   }
   li {
     display: block;
-    position: relative;
     list-style-type: none;
     border-bottom: 1px solid lighten($black, 80);
     border-bottom: 1px solid fade($black, 10);
@@ -79,6 +80,7 @@ body {
     }
     @media #{$small} {
       display: inline;
+      position: relative;
       margin-right: 25px;
       white-space: nowrap;
       border-bottom: 0 solid transparent;
@@ -95,18 +97,25 @@ body {
       }
     }
     ul {
-      background-color: #FFF;
-      left: 0;
-      position: absolute;
-      top: 1.5em;
-      z-index: 10;
-      box-shadow: 2px 2px 3px;
+      @media #{$small} {
+        background-color: #FFF;
+        left: 0;
+        position: absolute;
+        top: 1.5em;
+        z-index: 10;
+        box-shadow: 2px 2px 3px;
+      }
       li {
-        display: block;
-        padding: 0 1em 0 0.5em;
-        margin: 0;
-        border-top: 1px solid #343434;
-        border-left: 1px solid #343434;
+        padding: 0 0 0 0.5em;
+        @media #{$small} {
+          padding: 0 1em 0 0.5em;
+          display: block;
+          margin: 0;
+          border-top: 1px solid lighten($black, 80);
+          border-top: 1px solid fade($black, 10);
+          border-left: 1px solid lighten($black, 80);
+          border-left: 1px solid fade($black, 10);
+        }
       }
     }
   }
@@ -238,7 +247,7 @@ $button-size: 1.5rem;
 }
 
 // When JavaScript is enabled, we hide the menu
-.js .nav ul {
+.js .nav > ul {
   max-height: 0;
   overflow: hidden;
   @media #{$small} {
@@ -248,7 +257,7 @@ $button-size: 1.5rem;
 
 // Displaying the menu when the user has clicked on the button
 .js .nav .active + ul {
-  max-height: 30em;
+  max-height: 300em;
   overflow: hidden;
   -webkit-transition: max-height .4s;
   -moz-transition: max-height .4s;
