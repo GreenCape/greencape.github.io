@@ -1,7 +1,7 @@
 ---
 layout: project
 title: GreenCape / build
-repo: greencape/build
+github: greencape/build
 excerpt: "A Docker based build and test environment, especially for Joomla!."
 tags: [build, test, multi-version development, joomla, docker]
 share: false
