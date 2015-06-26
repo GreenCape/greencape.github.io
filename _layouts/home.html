@@ -16,9 +16,9 @@
 {% include _feature-image.html %}
 
 <div id="main" role="main">
-  <div class="article-author-side">
+  <aside class="article-author-side">
     {% include _author-bio.html %}
-  </div>
+  </aside>
   <div id="index">
     <h3><a href="{{ site.url}}/posts/">Recent Posts</a></h3>
     {% for post in site.posts limit:5 %}

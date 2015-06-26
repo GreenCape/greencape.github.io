@@ -1,9 +1,10 @@
 <div class="navigation-wrapper">
-	<div class="site-name" style="font-family:Arial, 'Helvetica Neue', Helvetica, sans-serif; margin-top: -.25em;">
+	<h1 class="site-name" style="font-family:Arial, 'Helvetica Neue', Helvetica, sans-serif; margin-top: -.25em;">
 		<a href="{{ site.url }}/"><img src="{{ site.url }}/images/logo-long.png" alt="GreenCape"/></a>
-    </div><!-- /.site-name -->
+    </h1><!-- /.site-name -->
 	<div class="top-navigation">
 		<nav role="navigation" id="site-nav" class="nav">
+            <header><h2>Site Navigation</h2></header>
 		    <ul>
 		        {% for link in site.data.navigation %}
 				    {% if link.url contains 'http' %}

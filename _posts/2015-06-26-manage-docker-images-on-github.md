@@ -51,14 +51,14 @@ This image layout can be used for services with only one active version.
 because it is defined to always reflect the *current* GitHub Pages setup.
 This image type is only available in its `latest` version.
 
+### Versioned images
+
 In most cases, the version number *does* matter.
 A version number usually consists of three parts: *major*, *minor*, and *patch*, separated by a dot ('point').
 With semantic versioning, it could be sufficient to look at the major value, since an increment on the patch value
 denotes no change regarding the features, an increment on the minor value denotes additional features, and an
 increment on the major value denotes a break of backward compatibility.
 So it is (read: *should be*) always safe to use a newer version, as long as the major value does not change.
-
-### Versioned images
 
 Some services maintain several versions in parallel, though. An example is PHP, which at the time of this writing is
 provided in four versions - 5.4.42, 5.5.26, 5.6.10, and 7.0.0 (alpha2).
