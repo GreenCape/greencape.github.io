@@ -2,17 +2,17 @@
 <table class="doc-nav">
     <tr>
         <td class="left" rowspan="2">
-            {% if page.prev.url %}<a href="{{ site.url }}/{{ page.prev.url }}"><i class="fa fa-fw fa-angle-left"></i> {{ page.prev.title }}</a>{% else %}<a href="#"> </a>{% endif %}
+            {% if page.prev.url %}<a href="{{ site.url }}/{{ page.prev.url }}"><span class="fa fa-fw fa-angle-left"></span> {{ page.prev.title }}</a>{% else %}<a href="#"> </a>{% endif %}
         </td>
         <td class="center">
-            {% if page.home.url %}<a href="{{ site.url }}/{{ page.home.url }}"><i class="fa fa-fw fa-angle-double-up"></i> {{ page.home.title }}</a>{% else %}<a href="#"> </a>{% endif %}
+            {% if page.home.url %}<a href="{{ site.url }}/{{ page.home.url }}"><span class="fa fa-fw fa-angle-double-up"></span> {{ page.home.title }}</a>{% else %}<a href="#"> </a>{% endif %}
         </td>
         <td class="right" rowspan="2">
-            {% if page.next.url %}<a href="{{ site.url }}/{{ page.next.url }}">{{ page.next.title }} <i class="fa fa-fw fa-angle-right"></i></a>{% else %}<a href="#"> </a>{% endif %}
+            {% if page.next.url %}<a href="{{ site.url }}/{{ page.next.url }}">{{ page.next.title }} <span class="fa fa-fw fa-angle-right"></span></a>{% else %}<a href="#"> </a>{% endif %}
         </td>
     </tr><tr>
         <td class="center">
-            {% if page.up.url %}<a href="{{ site.url }}/{{ page.up.url }}"><i class="fa fa-fw fa-angle-up"></i> {{ page.up.title }}</a>{% else %}<a href="#"> </a>{% endif %}
+            {% if page.up.url %}<a href="{{ site.url }}/{{ page.up.url }}"><span class="fa fa-fw fa-angle-up"></span> {{ page.up.title }}</a>{% else %}<a href="#"> </a>{% endif %}
         </td>
     </tr>
 </table>

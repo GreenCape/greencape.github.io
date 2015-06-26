@@ -9,9 +9,9 @@
 				    {% if link.url contains 'http' %}
 				        {% assign domain = '' %}
                         {% if link.url contains 'github.com' %}
-                            {% assign external = ' <i class="fa fa-fw fa-github"></i>' %}
+                            {% assign external = ' <span class="fa fa-fw fa-github"></span>' %}
                         {% else %}
-                            {% assign external = ' <i class="fa fa-fw fa-external-link"></i>' %}
+                            {% assign external = ' <span class="fa fa-fw fa-external-link"></span>' %}
                         {% endif %}
                     {% else %}
 				        {% assign domain = site.url %}
@@ -25,9 +25,9 @@
                                 {% if sub.url contains 'http' %}
                                     {% assign domain = '' %}
                                     {% if sub.url contains 'github.com' %}
-                                        {% assign external = ' <i class="fa fa-fw fa-github"></i>' %}
+                                        {% assign external = ' <span class="fa fa-fw fa-github"></span>' %}
                                     {% else %}
-                                        {% assign external = ' <i class="fa fa-fw fa-external-link"></i>' %}
+                                        {% assign external = ' <span class="fa fa-fw fa-external-link"></span>' %}
                                     {% endif %}
                                 {% else %}
                                     {% assign domain = site.url %}
