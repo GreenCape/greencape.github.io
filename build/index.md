@@ -5,6 +5,7 @@ github: greencape/build
 excerpt: "A Docker based build and test environment, especially for Joomla!."
 tags: [build, test, multi-version development, joomla, docker]
 share: false
+comments: true
 image:
   feature: header-image-2.jpg
 ---
@@ -20,7 +21,7 @@ extensions. It supports
 Although this environment is developed for and only tested with Joomla!, it is not restricted
 to that CMS.
 
-## Content
+## Table of Contents
 
   - [Installation](/build/installation/)
   - [Usage](/build/usage/)

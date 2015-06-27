@@ -1,27 +1,20 @@
-<div class="navigation-wrapper">
-	<h1 class="site-name" style="font-family:Arial, 'Helvetica Neue', Helvetica, sans-serif; margin-top: -.25em;">
-		<a href="{{ site.url }}/"><img src="{{ site.url }}/images/logo-long.png" alt="GreenCape"/></a>
-    </h1><!-- /.site-name -->
-	<div class="top-navigation">
-		<nav role="navigation" id="site-nav" class="nav">
-            <header><h2>Site Navigation</h2></header>
-		    <ul>
-		        {% for link in site.data.navigation %}
-				    {% if link.url contains 'http' %}
-				        {% assign domain = '' %}
+        <nav>
+            <header><h2><a href="#" onclick="$('#main-menu').toggle();">Menu <span class="fa fa-fw fa-bars"></span></a></h2></header>
+            <ul id="main-menu">
+                {% for link in site.data.navigation %}
+                    {% if link.url contains 'http' %}
                         {% if link.url contains 'github.com' %}
                             {% assign external = ' <span class="fa fa-fw fa-github"></span>' %}
                         {% else %}
                             {% assign external = ' <span class="fa fa-fw fa-external-link"></span>' %}
                         {% endif %}
                     {% else %}
-				        {% assign domain = site.url %}
                         {% assign external = '' %}
                     {% endif %}
-				    <li>
+                    <li>
                         {% if link.menu %}
-                        <a href="{{ domain }}{{ link.url }}" onclick="$('#{{ link.id }}').toggle(); return false;">{{ link.title }}{{ external }}</a>
-                        <ul id="{{ link.id }}" style="display:none;">
+                        <a {% if link.url %}href="{{ link.url }}"{% endif %} onclick="$('#{{ link.id }}').toggle();">{{ link.title }}{{ external }}</a>
+                        <ul id="{{ link.id }}">
                             {% for sub in link.menu %}
                                 {% if sub.url contains 'http' %}
                                     {% assign domain = '' %}
@@ -35,17 +28,14 @@
                                     {% assign external = '' %}
                                 {% endif %}
                                 <li>
-                                    <a href="{{ domain }}{{ sub.url }}" {% if sub.url contains 'http' %}target="_blank"{% endif %} onclick="$('#{{ link.id }}').hide();">{{ sub.title }}{{ external }}</a>
+                                    <a href="{{ sub.url }}" {% if sub.url contains 'http' %}target="_blank"{% endif %} onclick="$('#{{ link.id }}').hide();">{{ sub.title }}{{ external }}</a>
                                 </li>
                             {% endfor %}
                         </ul>
                         {% else %}
-                        <a href="{{ domain }}{{ link.url }}" {% if link.url contains 'http' %}target="_blank"{% endif %}>{{ link.title }}{{ external }}</a>
+                        <a href="{{ link.url }}" {% if link.url contains 'http' %}target="_blank"{% endif %}>{{ link.title }}{{ external }}</a>
                         {% endif %}
                     </li>
-				{% endfor %}
-		    </ul>
-		</nav>
-	</div><!-- /.top-navigation -->
-    <!-- /.site-name -->
-</div><!-- /.navigation-wrapper -->
+                {% endfor %}
+            </ul>
+        </nav>

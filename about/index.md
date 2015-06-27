@@ -14,7 +14,20 @@ It was created as a pool for development related stuff, which is used throughout
 [nibralab](http://nibralab.github.io) (think tank), [laJoom](http://laJoom.com) (extension development), and
 BSDS (consulting) itself.
 
-> **BSDS Braczek Software- und DatenSysteme**  
-> Niels Braczek  
-> Husumer Straße 33  
-> D-25821 Breklum  
+<div class="org" itemprop="affiliation" title="Organization" itemscope="itemscope" itemtype="http://www.data-vocabulary.org/Organization/">
+    <div class="vcard">
+        <h2 class="organization-name fn" itemprop="name">BSDS Braczek Software- und DatenSysteme</h2>
+        <p>Niels Braczek</p> 
+        <div class="adr" itemprop="address" itemscope="itemscope" itemtype="http://data-vocabulary.org/Address/">
+            <span class="street-address" itemprop="street-address">Husumer Straße 33</span><br />
+            <span class="postal-code" itemprop="postal-code">25821</span>
+            <span class="locality" itemprop="locality">Breklum</span><br />
+            <!-- <abbr class="region" itemprop="region" title="Florida">FL</abbr> -->
+            <span class="country-name" itemprop="country-name">Germany</span>
+            <span class="geo" itemprop="geo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Geo/" style="display: none;">
+                <abbr class="latitude" itemprop="latitude" title="60.6060606060">60.6060606060</abbr>
+                <abbr class="longitude" itemprop="longitude" title="-60.6060606060">-60.6060606060</abbr>
+            </span>
+        </div>
+    </div>
+</div>
