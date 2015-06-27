@@ -1,19 +1,10 @@
 {% if page.home.url %}
-<table class="doc-nav">
-    <tr>
-        <td class="left" rowspan="2">
-            {% if page.prev.url %}<a href="/{{ page.prev.url }}"><span class="fa fa-fw fa-angle-left"></span> {{ page.prev.title }}</a>{% else %}<a href="#"> </a>{% endif %}
-        </td>
-        <td class="center">
-            {% if page.home.url %}<a href="/{{ page.home.url }}"><span class="fa fa-fw fa-angle-double-up"></span> {{ page.home.title }}</a>{% else %}<a href="#"> </a>{% endif %}
-        </td>
-        <td class="right" rowspan="2">
-            {% if page.next.url %}<a href="/{{ page.next.url }}">{{ page.next.title }} <span class="fa fa-fw fa-angle-right"></span></a>{% else %}<a href="#"> </a>{% endif %}
-        </td>
-    </tr><tr>
-        <td class="center">
-            {% if page.up.url %}<a href="/{{ page.up.url }}"><span class="fa fa-fw fa-angle-up"></span> {{ page.up.title }}</a>{% else %}<a href="#"> </a>{% endif %}
-        </td>
-    </tr>
-</table>
+<div class="doc-nav">
+    <a class="center" href="/{{ page.home.url }}"><span class="fa fa-fw fa-angle-double-up"></span> {{ page.home.title }}</a>
+</div>
+<div class="doc-nav">
+    {% if page.prev.url %}<a class="left" href="/{{ page.prev.url }}"><span class="fa fa-fw fa-angle-left"></span> {{ page.prev.title }}</a>{% else %}<a class="left disabled"><span class="fa fa-fw fa-angle-left"></span></a>{% endif %}
+    {% if page.up.url %}<a class="center" href="/{{ page.up.url }}"><span class="fa fa-fw fa-angle-up"></span> {{ page.up.title }}</a>{% else %}<a class="center disabled"><span class="fa fa-fw fa-angle-up"></span></a>{% endif %}
+    {% if page.next.url %}<a class="right" href="/{{ page.next.url }}">{{ page.next.title }} <span class="fa fa-fw fa-angle-right"></span></a>{% else %}<a class="right disabled"><span class="fa fa-fw fa-angle-right"></span></a>{% endif %}
+</div>
 {% endif %}

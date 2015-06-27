@@ -368,3 +368,28 @@ body > footer {
     text-transform: uppercase;
   }
 }
+
+.doc-nav {
+  @include flex-container;
+  @include flex-row;
+  a {
+    display: inline-block;
+    text-align: center;
+    flex: 1 2 0;
+    &.left {
+      text-align: left;
+      flex: 1 1 0;
+    }
+    &.right {
+      text-align: right;
+      flex: 1 1 0;
+    }
+    &.disabled {
+      display: none;
+      @media #{$medium} {
+        display: inline-block;
+        visibility: hidden;
+      }
+    }
+  }
+}
