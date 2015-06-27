@@ -372,6 +372,8 @@ body > footer {
 .doc-nav {
   @include flex-container;
   @include flex-row;
+  background-color: #eee;
+  @include font-rem(14);
   a {
     display: inline-block;
     text-align: center;
