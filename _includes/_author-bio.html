@@ -2,7 +2,7 @@
   {% assign author = site.data.authors[page.author] %}{% else %}{% assign author = site.owner %}
 {% endif %}
 
-<div itemscope itemtype="http://schema.org/Person">
+<address itemscope itemtype="http://schema.org/Person">
 
 {% if author.avatar contains 'http' %}
 	<img src="{{ author.avatar }}" class="bio-photo" alt="{{ author.name }} bio photo">
@@ -32,4 +32,4 @@
   {% if author.weibo %}<a itemprop="sameAs" href="http://www.weibo.com/{{ author.weibo }}" class="author-social" target="_blank"><span class="fa fa-fw fa-weibo"></span> Weibo</a>{% endif %}
   {% if author.flickr %}<a itemprop="sameAs" href="http://www.flickr.com/{{ author.flickr }}" class="author-social" target="_blank"><span class="fa fa-fw fa-flickr"></span> Flickr</a>{% endif %}
   {% if author.joomla %}<a itemprop="sameAs" href="http://volunteers.joomla.org/joomlers/{{ author.joomla }}" class="author-social" target="_blank"><span class="fa fa-fw fa-joomla"></span> Joomla.org</a>{% endif %}
-</div>
+</address>
