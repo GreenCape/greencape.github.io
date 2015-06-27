@@ -25,8 +25,8 @@ BSDS (consulting) itself.
             <!-- <abbr class="region" itemprop="region" title="Florida">FL</abbr> -->
             <span class="country-name" itemprop="country-name">Germany</span>
             <span class="geo" itemprop="geo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Geo/" style="display: none;">
-                <abbr class="latitude" itemprop="latitude" title="60.6060606060">60.6060606060</abbr>
-                <abbr class="longitude" itemprop="longitude" title="-60.6060606060">-60.6060606060</abbr>
+                <abbr class="latitude" itemprop="latitude" title="54.60588">54.60588</abbr>
+                <abbr class="longitude" itemprop="longitude" title="8.98127">8.98127</abbr>
             </span>
         </div>
     </div>
