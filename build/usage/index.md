@@ -76,8 +76,8 @@ An average environment definition will contain just the `server`, `joomla`, and 
 
 Defines the Joomla version and the sample data.
 
-| **version** | This setting determines the Joomla version to be installed in this environment. It can be any Joomla version since `1.0.0`. The version can be fully qualified, e.g., `3.4.2`, but `3.4`, `3`, `latest`, `master`, or `staging`. |
-| **sampleData** | Which sample data to install, if any. |
+| **version** | This setting determines the Joomla version to be installed in this environment. It can be any Joomla version since `1.0.0`. The version can be fully qualified, e.g., `3.4.2`, but `3.4`, `3`, `latest`, `master`, or `staging` can also be used. |
+| **sampleData** | Which sample data to install, if any. The file `sample_<value>.sql` must exist for the selected Joomla version and database driver. |
 
 #### Database
 
