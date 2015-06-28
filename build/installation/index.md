@@ -32,7 +32,25 @@ properly installed on your development system. Everything else will be retrieved
 [dnsmasq]: http://www.thekelleys.org.uk/dnsmasq/doc.html "Local DNS Server"
 [graphviz]: http://www.graphviz.org/ "Graph Visualization Software"
 
-### Configuration of DNSmasq
+### Preparation of the build and test environment
+
+Add the build and test environment as a submodule to your project, so `build/` is
+managed as a project of its own within your project, giving you the opportunity to branch and tweak it and retain
+the updatability anyway.
+
+```
+$ cd <project>
+$ git submodule add https://github.com/GreenCape/build.git
+```
+
+In the `build` subdirectory, call Composer to resolve the dependencies.
+
+    $ cd <project>/build
+    $ composer install
+
+Copy the `build.xml.dist` to your project's root directory, rename it to `build.xml`, and adapt it to your settings, if necessary.
+
+#### Configuration of DNSmasq
 
 To route all requests for `*.dev` domains to localhost, add the line
 
@@ -47,11 +65,3 @@ contains the lines
 
     ;; ANSWER SECTION:
     *.dev.			0	IN	A	127.0.0.1
-
-### Preparation of the build and test environment
-
-Download the build environment and unpack it into your project directory.
-In the `build` subdirectory, call Composer to resolve the dependencies.
-
-    $ cd <project>/build
-    $ composer install
