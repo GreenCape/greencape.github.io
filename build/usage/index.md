@@ -69,13 +69,14 @@ Defines version and credentials for a PostgreSQL database server.
 
 | **name** | The name for this environment. For the default environment, it is always `default`.
 
-Common settings to all test servers are kept in `default.xml`.
+Common settings to all test servers are kept in an environment named `default` and stored in `default.xml`.
+An average environment definition will contain just the `server`, `joomla`, and `database` elements. 
 
 #### Joomla
 
 Defines the Joomla version and the sample data.
 
-| **version** | This setting determines the Joomla version to be installed in this environment. It can be any J00mla version since `1.0.0`. The version can be fully qualified, e.g., `3.4.2`, but `3.4`, `3`, `latest`, `master`, or `staging`. |
+| **version** | This setting determines the Joomla version to be installed in this environment. It can be any Joomla version since `1.0.0`. The version can be fully qualified, e.g., `3.4.2`, but `3.4`, `3`, `latest`, `master`, or `staging`. |
 | **sampleData** | Which sample data to install, if any. |
 
 #### Database
