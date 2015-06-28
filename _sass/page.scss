@@ -395,3 +395,11 @@ body > footer {
     }
   }
 }
+
+td {
+  vertical-align: text-top;
+  padding-right: .5em;
+}
+td:last-of-type {
+  padding-right: 0;
+}

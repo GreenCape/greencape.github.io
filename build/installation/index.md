@@ -38,30 +38,52 @@ Add the build and test environment as a submodule to your project, so `build/` i
 managed as a project of its own within your project, giving you the opportunity to branch and tweak it and retain
 the updatability anyway.
 
-```
+{% highlight bash %}
 $ cd <project>
 $ git submodule add https://github.com/GreenCape/build.git
-```
+{% endhighlight %}
 
 In the `build` subdirectory, call Composer to resolve the dependencies.
 
-    $ cd <project>/build
-    $ composer install
+{% highlight bash %}
+$ cd <project>/build
+$ composer install
+{% endhighlight %}
 
-Copy the `build.xml.dist` to your project's root directory, rename it to `build.xml`, and adapt it to your settings, if necessary.
+Copy the `build.xml.dist` to your project's root directory, rename it to `build.xml`, and adapt it to your settings.
+Everything but the package data should not need to be changed.
+
+The Phing build file `build.xml` located in the `build/phing` directory provides a number of useful build targets.
+Most of these targets are implemented in separate files, which can be found in the `build/phing` directory.
+
+In your project root directory, issue the command
+
+{% highlight bash %}
+$ phing help
+{% endhighlight %}
+    
+to list all available build targets with their description and other useful information.
+
+
 
 #### Configuration of DNSmasq
 
 To route all requests for `*.dev` domains to localhost, add the line
 
-    address=/dev/127.0.0.1
+{% highlight text %}
+address=/dev/127.0.0.1
+{% endhighlight %}
     
 to the DNSmasq configuration. This is best done in its own file named `dev` in the `/etc/dnsmasq.d` directory (for Ubuntu).
 You may add it to `/etc/dnsmasq.conf` directly instead, if you want. It is set up correctly, if the output of
 
-    dig *.dev
+{% highlight bash %}
+$ dig *.dev
+{% endhighlight %}
     
 contains the lines
 
-    ;; ANSWER SECTION:
-    *.dev.			0	IN	A	127.0.0.1
+{% highlight text %}
+;; ANSWER SECTION:
+*.dev.			0	IN	A	127.0.0.1
+{% endhighlight %}
