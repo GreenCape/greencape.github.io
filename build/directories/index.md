@@ -19,24 +19,23 @@ When using this build and test environment, your directory layout looks like thi
 
     <project>/                      # Your project's root directory
      |- build/                      # The GreenCape build environment as a git submodule
-     |   |- bin                     # Executable files, that are not (yet) available through Composer
      |   |- cache/                  # [gen] Cache for downloaded Joomla! versions
      |   |- config/                 # Configuration files 
      |   |- docker/                 # Definition of individual Docker images, that are not (yet) available from DockerHub
      |   |- logs/                   # [gen] Log files produced by the build and test environment
      |   |- phing/                  # Phing related files
-     |   |   |- docs/               # Documentation for the custom Phing tasks
-     |   |   |- tasks/              # Custom tasks for Phing
      |   |   |- *.xml               # Build target definitions, included by build.xml
-     |   |   `- tasks.properties    # Task properties, included by build.xml
+     |   |- plantuml                # Files for embedding of PlantUML
      |   |- report/                 # [gen] HTML reports generated from the log files
+     |   |- screenshots             # [gen] Screenshots by failing system tests
      |   |- servers/                # [gen] Volumes and configuration files for the Docker containers
      |   |- template/               # Templates for container files
      |   |- vendor/                 # [gen] Dependencies installed by Composer
-     |   |- build.xml               # The main build file
+     |   |- build.xml.dist          # Template for the main build file
      |   |- composer.json           # Description of the dependencies
      |   |- composer.lock           # Composer lock file
      |   |- README.md               # This file
+     |   |- *.*                     # Files related to the build project itself
      |   `- version.json            # [gen] Available Joomla! versions
      |- dist/                       # [gen] Your project's distribution packages
      |- docs/                       # Your project's documentation
