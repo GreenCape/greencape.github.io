@@ -4,8 +4,6 @@ title: Directory Layouts
 excerpt: "A Docker based build and test environment, especially for Joomla!."
 tags: [build, test, multi-version development, joomla, docker, directory, layout]
 share: false
-image:
-  feature: header-image-2.jpg
 prev:
   url: build/usage/
   title: Usage

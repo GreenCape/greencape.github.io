@@ -4,8 +4,6 @@ title: Usage
 excerpt: "A Docker based build and test environment, especially for Joomla!."
 tags: [build, test, multi-version development, joomla, docker, usage]
 share: false
-image:
-  feature: header-image-2.jpg
 prev:
   url: build/installation/
   title: Installation

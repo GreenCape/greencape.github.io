@@ -4,8 +4,6 @@ title: Quality Check
 excerpt: "A Docker based build and test environment, especially for Joomla!."
 tags: [build, test, multi-version development, joomla, docker, quality, check]
 share: false
-image:
-  feature: header-image-2.jpg
 prev:
   url: build/directories
   title: Directory Layouts
