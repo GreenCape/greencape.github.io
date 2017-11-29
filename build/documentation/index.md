@@ -7,6 +7,9 @@ share: false
 prev:
   url: build/quality/
   title: Quality Check
+next:
+  url: build/phing-targets/
+  title: Phing Targets
 home:
   url: build/
   title: GreenCape / build

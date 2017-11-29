@@ -25,9 +25,11 @@ to that CMS.
 
   - [Installation](/build/installation/)
   - [Usage](/build/usage/)
-  - [Directory Layouts](/build/directories)
-  - [Quality Check](/build/quality)
-  - [Documentation](/build/documentation)
+  - [Directory Layouts](/build/directories/)
+  - [Quality Check](/build/quality/)
+  - [Documentation](/build/documentation/)
+  - [Phing Targets](build/phing-targets/)
+
   
 ## License
 
