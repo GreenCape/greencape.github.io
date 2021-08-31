@@ -54,10 +54,16 @@ Everything but the package data should not need to be changed.
 The Phing build file `build.xml` located in the `build/phing` directory provides a number of useful build targets.
 Most of these targets are implemented in separate files, which can be found in the `build/phing` directory.
 
-In your project root directory, issue the command
+The `phing` command is available as `./build/vendor/bin/phing`. For your convenience, it is recommended to add an alias, for example
 
 {% highlight bash %}
-$ phing help
+$ alias dev='./build/vendor/bin/phing'
+{% endhighlight %}
+
+In your project root directory, you can then issue the command
+
+{% highlight bash %}
+$ dev help
 {% endhighlight %}
     
 to list all available build targets with their description and other useful information.
